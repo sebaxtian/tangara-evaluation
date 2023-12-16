@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "tangara-evaluation"
+version = "1.0.0"
+description = "Base code to evaluate Tangara's sensors by comparing them through a time series, identifying missing data, detecting outliers, and assessing offline sensors."
+authors = ["Sebastian Rios Sabogal <sebaxtianrioss@gmail.com>"]
+license = "GPL-3.0-or-later"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+jupyter = "^1.0.0"
+pandas = "^2.1.4"
+matplotlib = "^3.8.2"
+seaborn = "^0.13.0"
+scipy = "^1.11.4"
+geohash2 = "^1.1"
+importnb = "^2023.11.1"
+python-dotenv = "^1.0.0"
+loguru = "^0.7.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

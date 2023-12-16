@@ -1,5 +1,13 @@
 # tangara-evaluation
-Code base to evaluate Tangara's sensors by comparing them from a time series, searching missing data, outliers and offline sensors.
+Base code to evaluate Tangara's sensors by comparing them through a time series, identifying missing data, detecting outliers, and assessing offline sensors.
+
+[![Tangara Activismo del Aire](src/docs/logo-principal-color.png "Tangara Activismo del Aire")](https://tangara.chis.pa/)
+
+## Requirements
+
+* Python 3.8+
+* Poetry 1.7+
+    - [Install Poetry](https://python-poetry.org/docs/#installation)
 
 ## How to use
 
@@ -7,29 +15,75 @@ Please read and execute each step below:
 
 ### Step 1
 
-Create and use Python virtual environment:
+Add Poetry to your PATH:
 
 ```bash
-$promt> python -m venv .venv
-$promt> source .venv/bin/activate
+$promt> export PATH="$HOME/.local/bin:$PATH"
+```
+
+Also you can add Poetry to your .bashrc file:
+
+```bash
+$promt> nano ~/.bashrc
+```
+
+Install poetry by script:
+
+```bash
+$promt> ./install-poetry.sh
 ```
 
 ### Step 2
 
-Install all Python requirements:
+Command to tell Poetry which Python version to use for the current project:
 
 ```bash
-$promt> python -m pip install -U pip
-$promt> pip install -r requirements.txt
+$promt> poetry env use 3.12
+```
+
+### Step 3
+
+Activating the virtual environment:
+
+```bash
+$promt> poetry shell
+```
+
+### Step 4
+
+Installing dependencies:
+
+```bash
+$(tangara-evaluation-py3.12)> poetry install --no-root
 ```
 
 ### Optional
 
-Generate a requirements file and then install from it in another environment:
+Displaying the environment information:
 
 ```bash
-$promt> pip freeze > requirements.txt
+$promt> poetry env info
 ```
+
+Adds required packages to your pyproject.toml and installs them:
+
+```bash
+$promt> poetry add jupyter
+```
+
+Deactivate the virtual environment and exit:
+
+```bash
+$(tangara-superset-py3.12)> exit
+# To deactivate the virtual environment without leaving the shell use deactivate
+$(tangara-superset-py3.12)> deactivate
+```
+
+---
+
+## Tangara Evaluation
+
+A base code was created inside the folder **src** please check out the [README.md](src/README.md) file.
 
 ---
 
