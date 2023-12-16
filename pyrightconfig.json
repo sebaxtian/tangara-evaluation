@@ -1,3 +1,4 @@
 {
-    "reportMissingImports": false
+    "reportMissingImports": false,
+    "reportMissingModuleSource": false
 }
