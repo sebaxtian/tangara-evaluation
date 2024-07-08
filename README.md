@@ -18,19 +18,19 @@ Please read and execute each step below:
 Add Poetry to your PATH:
 
 ```bash
-$promt> export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 ```
 
 Also you can add Poetry to your .bashrc file:
 
 ```bash
-$promt> nano ~/.bashrc
+nano ~/.bashrc
 ```
 
 Install poetry by script:
 
 ```bash
-$promt> ./install-poetry.sh
+./install-poetry.sh
 ```
 
 ### Step 2
@@ -38,7 +38,7 @@ $promt> ./install-poetry.sh
 Command to tell Poetry which Python version to use for the current project:
 
 ```bash
-$promt> poetry env use 3.12
+poetry env use 3.12
 ```
 
 ### Step 3
@@ -46,7 +46,7 @@ $promt> poetry env use 3.12
 Activating the virtual environment:
 
 ```bash
-$promt> poetry shell
+poetry shell
 ```
 
 ### Step 4
@@ -54,7 +54,7 @@ $promt> poetry shell
 Installing dependencies:
 
 ```bash
-$(tangara-evaluation-py3.12)> poetry install --no-root
+poetry install --no-root
 ```
 
 ### Optional
@@ -62,21 +62,25 @@ $(tangara-evaluation-py3.12)> poetry install --no-root
 Displaying the environment information:
 
 ```bash
-$promt> poetry env info
+poetry env info
 ```
 
 Adds required packages to your pyproject.toml and installs them:
 
 ```bash
-$promt> poetry add jupyter
+poetry add jupyter
 ```
 
 Deactivate the virtual environment and exit:
 
 ```bash
-$(tangara-superset-py3.12)> exit
-# To deactivate the virtual environment without leaving the shell use deactivate
-$(tangara-superset-py3.12)> deactivate
+exit
+```
+
+To deactivate the virtual environment without leaving the shell use deactivate:
+
+```bash
+deactivate
 ```
 
 ---
