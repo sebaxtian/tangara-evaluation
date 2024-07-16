@@ -322,3 +322,5 @@ pyrightconfig.json
 
 **/data/backup/*
 !**/data/backup/.gitkeep
+
+src/targets.csv

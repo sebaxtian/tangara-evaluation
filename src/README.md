@@ -25,6 +25,10 @@ The environement variables below are required:
 * DB_NAME_INFLUXDB=my_database
 * PLOT_CHARTS=
 * GROUP_BY_TIME=30s
+* TANGARA_REFERENCE=TANGARA_25BE
+* TANGARA_TARGETS=targets.csv
+* THRESHOLD_MISSING_DATA=0.8
+* THRESHOLD_CORRELATION_DATA=0.8
 * START_ISO8601_DATETIME=2023-03-17T00:00:00-05:00
 * END_ISO8601_DATETIME=2023-03-17T00:00:00-05:00
 
@@ -35,3 +39,11 @@ When are you using 30s the raw data collected from InfluxDB will be the last val
 **PLOT_CHARTS**: allowed values: **True**, **''**
 
 If you want to skip the Plot Charts process because it takes a long time to finish, leave it empty to skip or 'True' otherwise.
+
+**TANGARA_REFERENCE**: Tangara sensor is used as a reference to validate data from target sensors.
+
+**TANGARA_TARGETS**: CSV file with the list of target sensors to validate the data. Use the **example.targets.csv** file as an example.
+
+**THRESHOLD_MISSING_DATA**: Use this value as the minimum threshold of data to have. No data 0.0 and 1.0 all data.
+
+**THRESHOLD_CORRELATION_DATA**: Use this value to determine the minimum positive correlation that should exist between the data. No correlation 0.0 and 1.0 strong correlation.
