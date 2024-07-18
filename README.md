@@ -5,8 +5,8 @@ Base code to evaluate Tangara's sensors by comparing them through a time series,
 
 ## Requirements
 
-* Python 3.8+
-* Poetry 1.7+
+* Python 3.12+
+* Poetry 1.8+
     - [Install Poetry](https://python-poetry.org/docs/#installation)
 
 ## How to use
@@ -14,6 +14,12 @@ Base code to evaluate Tangara's sensors by comparing them through a time series,
 Please read and execute each step below:
 
 ### Step 1
+
+Install python-is-python3
+
+```bash
+sudo apt install python-is-python3
+```
 
 Add Poetry to your PATH:
 

@@ -5,7 +5,12 @@
 # https://python-poetry.org/docs/#installing-with-the-official-installer
 #
 
-curl -sSL https://install.python-poetry.org | python3 -
+# previously install python-is-python3
+# sudo apt install python-is-python3
+curl -sSL https://install.python-poetry.org | python -
+export PATH="$HOME/.local/bin:$PATH"
+# Also add it to .bashrc
+# export PATH="$HOME/.local/bin:$PATH"
 poetry --version
 poetry completions bash >> ~/.bash_completion
 poetry config virtualenvs.in-project true
